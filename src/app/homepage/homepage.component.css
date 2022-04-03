@@ -1,0 +1,52 @@
+
+.img{
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+    bottom: 0px;
+    top: 0px;
+    left: 0px;
+}
+
+.login-button{
+    text-align: right;
+}
+
+.container{
+    color: white;
+    text-align: center;
+}
+
+.title{
+    margin-top: 10%;
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.subtitle{
+    font-size: 24px;
+    font-weight: 600;
+    margin: 30px 0;
+}
+
+.login-button{
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 10px 20px;
+}
+
+.signup-button{
+    background-color: #950101;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 10px 40px;
+    font-weight: 600;
+    font-size: 18px;
+}
