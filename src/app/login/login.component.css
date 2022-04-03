@@ -1,0 +1,27 @@
+#login{
+    background-color: #000000;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.card-side{
+    height: 100vh;
+    padding: 0;
+}
+
+.card{
+    max-width: 70%;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 10%;
+}
+
+.img-side{
+    padding: 0;
+}
+
+.login-img{
+    max-height:100vh;
+    position: fixed;
+    border-left: 5px solid #950101;
+}
