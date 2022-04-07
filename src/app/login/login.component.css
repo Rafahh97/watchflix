@@ -7,13 +7,102 @@
 .card-side{
     height: 100vh;
     padding: 0;
+    border-left: 5px solid #950101;
 }
 
 .card{
-    max-width: 70%;
+    max-width: 60%;
     text-align: center;
     border-radius: 10px;
-    margin-top: 10%;
+    margin-top: 20%;
+    border: 3px solid #950101;
+}
+
+.card-body{
+    padding: 20px 40px;
+}
+
+h2{
+    color: #3D0000;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+input{
+    margin-bottom: 15px;
+    border-radius: 20px;
+    border: 2px solid #950101;
+}
+
+.form-control:focus{
+    border: none;
+    box-shadow: 0 0 0 0.2rem #950101;
+}
+
+.forgot{
+    color: #950101;
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.login-button{
+    background-color: #950101;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 8px;
+    width: 100%;
+    margin: 12px 0;
+}
+
+.login-button:hover{
+    box-shadow: 0 0 0 0.2rem #950101;
+    cursor: pointer;
+}
+
+.facebook-button{
+    background-color: #4267B2;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.facebook-button:hover{
+    box-shadow: 0 0 0 0.2rem #4267B2;
+    cursor: pointer;
+}
+
+.google-button{
+    background-color: #FD4D3E;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 8px;
+    width: 100%;
+}
+
+.google-button:hover{
+    box-shadow: 0 0 0 0.2rem #FD4D3E;
+    cursor: pointer;
+}
+
+.not-register{
+    font-weight: 600;
+    font-size: 14px;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+.go-signup{
+    text-decoration: none;
+    color: #950101;
+    font-weight: 600;
 }
 
 .img-side{

@@ -3,7 +3,32 @@
         <div class="col-lg-6 card-side">
             <div class="card mx-auto">
                 <div class="card-body">
-                    <h3>Entrar</h3>
+                    <h2>Entrar</h2>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="E-mail" placeholder="E-mail">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+                        </div>
+                        <div>
+                            <p class="forgot">Esqueceu sua senha?</p>
+                        </div>
+                        <a routerLink="/mainpage"><button type="submit" class="btn btn-primary login-button">Entrar</button></a>
+
+                        <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
+                        <div>
+                            <button type="button" class="btn btn-primary facebook-button"> Entrar com o Facebook</button>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-primary google-button"> Entrar com o Google</button>
+                        </div>
+                        <div>
+                            <p class="not-register">Ainda não possui uma conta? <a routerLink="/signup" class="go-signup">CADASTRE-SE</a></p>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
