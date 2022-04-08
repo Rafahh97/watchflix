@@ -1,16 +1,5 @@
-<!-- <app-navbar ></app-navbar>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col min-vh-100 p-4">
-            
-            <button class="btn float-start" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
-                MENU
-            </button>
-            <div class="text-center">FUNCIONA!</div>
-        </div>
-    </div>
-</div>-->
+<app-navbar ></app-navbar>
 
 <div class="main-carousel">
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" >
@@ -21,7 +10,7 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item" [ngClass]="{'active': i === 0}" *ngFor="let mainshow of mainshows; let i = index">
-            
+            <span style="font-size:30px;cursor:pointer" (click)="openNav()" class="open-nav">&#9776;</span>
             <img src={{mainshow.foto}} class="d-block w-100" alt="...">
             
             <div class="carousel-caption d-md-block">

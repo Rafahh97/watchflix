@@ -30,5 +30,11 @@ export class MainpageComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
+  openNav() {
+    console.log("Cheguei aqui")
+    document.getElementById("mySidenav")!.style.width = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  }
 
 }

@@ -1,4 +1,9 @@
-
+.open-nav{
+    position: fixed;
+    margin-top: 20px;
+    margin-left: 20px;
+    color: white;
+}
 
 .carousel-caption{
     text-align: left;
