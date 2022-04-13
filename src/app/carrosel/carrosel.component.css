@@ -1,3 +1,7 @@
+.carousel{
+    z-index: 0;
+}
+
 img{
     width: 50px;
     height: 250px;
