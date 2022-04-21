@@ -1,0 +1,83 @@
+<app-navbar></app-navbar>
+
+<div class="row add-page">
+    <span style="font-size:30px;cursor:pointer" (click)="openNav()" class="open-nav">&#9776;</span>
+    <div class="col-12 card-container">
+
+        <div class="card">
+            <div class="card-body">
+                <div class="titulo">
+                    <h2>Adicionar título</h2>
+                </div> 
+
+                <form class="form-body">
+        
+                    <div class="mb-3">
+                        <label for="titulo" class="form-label">Título</label>
+                        <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="title.title">
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="form-group col-6">
+                            <label for="selectGenero">Gênero</label>
+                            <select class="form-control" id="selectGenero" [selectedIndex]="0">
+                                <option disabled>Selecione</option>
+                                <option>Ação</option>
+                                <option>Aventura</option>
+                                <option>Romance</option>
+                                <option>Terror</option>
+                                <option>Suspense</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group col-6">
+                            <label for="selectTipo">Tipo</label>
+                            <select class="form-control" id="selectTipo" [selectedIndex]="0">
+                                <option disabled>Selecione</option>
+                                <option>Filme</option>
+                                <option>Série</option>
+                                <option>Desenho</option>
+                            </select>
+                        </div>
+    
+                    </div>
+
+
+                    <div class="form-group mb-3">
+                            <label for="exampleFormControlTextarea1">Sinopse</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    
+
+                    <div class="mb-3">
+                        <label for="foto" class="form-label">Foto</label>
+                        <input type="text" class="form-control" id="foto" 
+                        name="foto" [(ngModel)]="title.capa">
+                      </div>
+
+                    <div class="text-center mb-4">
+                        <img [src]="title.capa" width="150px" class="title-img">
+                    </div>
+
+                    <div class="d-flex button-container">
+                        <div>
+                            <button routerLink="/mainpage" class="btn" id="btn-cancel" type="button">
+                                Cancelar
+                            </button>
+                        </div>
+
+                        <div>
+                            <button (click)="cadastrar()" class="btn" id="btn-salvar" type="button">
+                                Salvar
+                            </button>
+                        </div>                        
+                    </div>
+                </form>        
+            </div>
+          </div>
+
+    </div>
+    
+</div>
+<app-footer></app-footer>
+

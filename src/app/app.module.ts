@@ -14,6 +14,8 @@ import { CarroselComponent } from './carrosel/carrosel.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ManageShowsComponent } from './manage-shows/manage-shows.component';
+import { AddShowComponent } from './add-show/add-show.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { ManageShowsComponent } from './manage-shows/manage-shows.component';
     NavbarComponent,
     CarroselComponent,
     ManageShowsComponent,
+    AddShowComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +37,7 @@ import { ManageShowsComponent } from './manage-shows/manage-shows.component';
     BrowserModule,
     BrowserAnimationsModule,
     CarouselModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
