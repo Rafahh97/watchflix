@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { mainShows } from '../models/main-shows';
+import { MainShowsService } from '../services/main-shows.service';
 
 @Component({
   selector: 'app-mainpage',
@@ -8,27 +9,12 @@ import { mainShows } from '../models/main-shows';
 })
 export class MainpageComponent implements OnInit {
 
-  public mainshows: Array<mainShows> = [
-    {
-      id: 0,
-      nome: 'Sherlock',
-      foto: './../../assets/img-mock/sherlock.jpg'
-    },
-    {
-      id: 1,
-      nome: 'Bridgerton',
-      foto: './../../assets/img-mock/bridgerton.jpg'
-    },
-    {
-      id: 2,
-      nome: 'My name',
-      foto: './../../assets/img-mock/myname.jpg'
-    },
-  ];
+  public mainshow: Array<mainShows> = [];
 
-  constructor() { }
+  constructor( private mainshows: MainShowsService ) { }
 
   ngOnInit(): void {
+    this.mainshow = this.mainshows.getAll()
   }
   
   openNav() {

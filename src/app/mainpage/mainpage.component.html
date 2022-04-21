@@ -11,12 +11,12 @@
           aria-label="Slide 3"></button>
       </div>
       <div class="carousel-inner">
-        <div class="carousel-item" [ngClass]="{'active': i === 0}" *ngFor="let mainshow of mainshows; let i = index">
+        <div class="carousel-item" [ngClass]="{'active': i === 0}" *ngFor="let show of mainshow; let i = index">
           <span style="font-size:30px;cursor:pointer" (click)="openNav()" class="open-nav">&#9776;</span>
-          <img src={{mainshow.foto}} class="d-block w-100" alt="...">
+          <img src={{show.foto}} class="d-block w-100" alt="...">
 
           <div class="carousel-caption d-md-block">
-            <h1>{{mainshow.nome}}</h1>
+            <h1>{{show.nome}}</h1>
             <button class="watch-button">Assista</button>
             <button class="info-button">Informações</button>
           </div>
