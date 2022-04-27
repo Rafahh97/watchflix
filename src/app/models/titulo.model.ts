@@ -3,6 +3,9 @@ export class Titulos {
     public title: string;
     public capa: string;
     public alt: string;
+    public genero: string;
+    public tipo: string;
+    public sinopse: string;
 
     constructor()
     constructor(id?: number, 
