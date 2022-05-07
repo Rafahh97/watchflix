@@ -12,6 +12,20 @@ import { TitlesService } from '../services/titles.service';
 export class AddShowComponent implements OnInit {
 
   public title : Titulos = new Titulos();
+  tipos =[
+    {
+
+      tipo: "Filme"
+    },
+    {
+
+      tipo: "Série"
+    },
+    {
+
+      tipo: "Desenho"
+    }
+  ]
 
   constructor(private rota: Router, private titleServ: TitlesService) { }
 
@@ -19,12 +33,19 @@ export class AddShowComponent implements OnInit {
   }
 
   public cadastrar() {
-    this.titleServ.addOne(this.title);
-    this.rota.navigate(['/mainpage']);
+      this.titleServ.add(this.title).subscribe((resultado)=>{
+      console.log(resultado);
+      this.rota.navigate(['/mainpage']);
+    });
   }
 
   openNav() {
     document.getElementById("mySidenav")!.style.width = "250px";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
   }
+
+  onAddType(){ // Função que foi chamada
+    this.title.tipo;
+  }
+
 }

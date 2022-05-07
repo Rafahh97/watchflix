@@ -11,11 +11,17 @@ export class Titulos {
     constructor(id?: number, 
                title?: string, 
                 capa?: string,
-                alt?: string) {
+                alt?: string,
+                genero?: string,
+                tipo?: string,
+                sinopse?:string) {
 
         this.id = id? id : 0;
         this.title = title? title : '';
         this.capa = capa? capa: '';
-        this.alt = alt? alt:''
+        this.alt = alt? alt:'';
+        this.genero = genero? genero:'';
+        this.tipo = tipo? tipo:'';
+        this.sinopse = sinopse?sinopse:''
     }
 }
