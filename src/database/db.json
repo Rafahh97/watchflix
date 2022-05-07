@@ -67,7 +67,7 @@
       "id": 8,
       "capa": "https://i.pinimg.com/474x/25/12/5c/25125c83576ee3af5036d8aad90970fc.jpg",
       "alt": "Side 8",
-      "title": "Side 8",
+      "title": "Riverdale",
       "genero": "teste",
       "tipo": "filme",
       "sinopse": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
@@ -202,15 +202,6 @@
       "sinopse": "teste"
     },
     {
-      "id": 24,
-      "title": "hkhkhykyh",
-      "capa": "https://universonerd.net/portal/wp-content/uploads/2019/04/capa-filme.jpg",
-      "alt": "",
-      "genero": "",
-      "tipo": "",
-      "sinopse": "hfhghjgj"
-    },
-    {
       "id": 25,
       "title": "Eu Acredito",
       "capa": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR5o-v6-u5rLIygmUPu57-n8Qe1AMA0C-lrw&usqp=CAU",
@@ -227,6 +218,42 @@
       "genero": "",
       "tipo": "",
       "sinopse": "ergrgrgr"
+    },
+    {
+      "id": 27,
+      "title": "Riverdale",
+      "capa": "https://i.pinimg.com/474x/25/12/5c/25125c83576ee3af5036d8aad90970fc.jpg",
+      "alt": "",
+      "genero": "",
+      "tipo": "",
+      "sinopse": "Teste"
+    },
+    {
+      "id": 29,
+      "title": "The 100",
+      "capa": "https://plotwist.com.br/wp-content/uploads/2014/11/B2rPMzvIgAA9Hfy.jpg",
+      "alt": "",
+      "genero": "Aventura",
+      "tipo": "",
+      "sinopse": "Mais um teste"
+    },
+    {
+      "id": 30,
+      "title": "Heartstopper",
+      "capa": "https://pbs.twimg.com/media/FOTHcqCXIAA-cHh.jpg",
+      "alt": "",
+      "genero": "Romance",
+      "tipo": "",
+      "sinopse": "Teste"
+    },
+    {
+      "id": 31,
+      "title": "Fate",
+      "capa": "https://i.pinimg.com/736x/96/ff/e1/96ffe12e590a5872539462290424c392.jpg",
+      "alt": "",
+      "genero": "Aventura",
+      "tipo": "Serie",
+      "sinopse": "Teste que vai dar certo"
     }
   ],
   "main-show": [

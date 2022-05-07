@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ManageShowsComponent } from './manage-shows/manage-shows.component';
 import { AddShowComponent } from './add-show/add-show.component';
 import { FormsModule } from '@angular/forms';
+import { EditShowComponent } from './edit-show/edit-show.component';
 
 @NgModule({
   declarations: [
@@ -29,13 +30,13 @@ import { FormsModule } from '@angular/forms';
     CarroselComponent,
     ManageShowsComponent,
     AddShowComponent,
+    EditShowComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FontAwesomeModule,
-    BrowserModule,
     BrowserAnimationsModule,
     CarouselModule,
     FormsModule

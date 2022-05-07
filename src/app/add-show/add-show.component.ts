@@ -12,24 +12,26 @@ import { TitlesService } from '../services/titles.service';
 export class AddShowComponent implements OnInit {
 
   public title : Titulos = new Titulos();
-  tipos =[
-    {
+  /* tipos = ["Filme", "Série", "Desenho"]
+  typeId: number; // Declaração da variável (Precisa ter o Mesmo nome da ngModel.). */
+  
+  constructor(private rota: Router, private titleServ: TitlesService) {
+    
+   }
 
-      tipo: "Filme"
-    },
-    {
-
-      tipo: "Série"
-    },
-    {
-
-      tipo: "Desenho"
-    }
-  ]
-
-  constructor(private rota: Router, private titleServ: TitlesService) { }
-
+  
   ngOnInit(): void {
+  }
+
+  selectedOption: string;
+  printedOption: string;
+
+  options = [
+    { name: "Filme", value: 1 },
+    { name: "Série", value: 2 }
+  ]
+  print() {
+    this.printedOption = this.selectedOption;
   }
 
   public cadastrar() {
@@ -44,8 +46,10 @@ export class AddShowComponent implements OnInit {
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
   }
 
-  onAddType(){ // Função que foi chamada
-    this.title.tipo;
-  }
+  /* onAddType(){ // Função que foi chamada
+    this.title.tipo = this.tipos[this.typeId]
+    console.log(this.tipos[this.typeId])
+  } */
 
 }
+

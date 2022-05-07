@@ -2,9 +2,9 @@
     <h2 class="rowHeader css-0 m-2">Em alta</h2>
 
     <owl-carousel-o [options]="customOptions"  class="owl-theme">
-        <ng-container *ngFor="let item of catalogo;let odd = odd;">
-        <ng-template *ngIf="odd" carouselSlide [Id]="item.id">
-            <img [src]="item.capa" [alt]="item.alt" [title]="item.title">
+        <ng-container *ngFor="let item of catalogo;let odd = odd;" >
+        <ng-template *ngIf="odd" carouselSlide [Id]="item.id" >
+            <img [src]="item.capa" [alt]="item.alt" [title]="item.title" [routerLink]="['/edit', item.id]">
         </ng-template>
         </ng-container>
     </owl-carousel-o>
@@ -14,7 +14,7 @@
     <owl-carousel-o [options]="customOptions" class="owl-theme">
         <ng-container *ngFor="let item of catalogo;let even = even;">
         <ng-template *ngIf="even" carouselSlide [Id]="item.id">
-            <img [src]="item.capa" [alt]="item.alt" [title]="item.title">
+            <img [src]="item.capa" [alt]="item.alt" [title]="item.title" [routerLink]="['/edit', item.id]">
         </ng-template>
         </ng-container>
     </owl-carousel-o>
