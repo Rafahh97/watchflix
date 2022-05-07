@@ -14,9 +14,10 @@ export class MainpageComponent implements OnInit {
   constructor( private mainshows: MainShowsService ) { }
 
   ngOnInit(): void {
-    this.mainshow = this.mainshows.getAll()
-  }
-  
+    this.mainshows.getAll().subscribe((shows: mainShows[])=>{
+    this.mainshow = shows;
+  });
+}
   openNav() {
     document.getElementById("mySidenav")!.style.width = "250px";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";

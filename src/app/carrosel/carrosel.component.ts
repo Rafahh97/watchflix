@@ -10,13 +10,13 @@ import { TitlesService } from '../services/titles.service';
 })
 export class CarroselComponent implements OnInit {
 
-  public catalogo1: Array<Titulos> = [];
-  public catalogo2: Array<Titulos> = [];
-  constructor( private cat1: TitlesService, private cat2: TitlesService) { }
+  public catalogo: Array<Titulos> = [];
+  constructor( private titlesService: TitlesService) { }
 
   ngOnInit(): void {
-    this.catalogo1 = this.cat1.getAllOne()
-    this.catalogo2 = this.cat2.getAllTwo()
+    this.titlesService.getAll().subscribe((movies: Titulos[])=>{
+       this.catalogo = movies;
+    });
   }
   
  customOptions: OwlOptions = {

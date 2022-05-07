@@ -20,24 +20,28 @@
                     <div class="row mb-3">
                         <div class="form-group col-6">
                             <label for="selectGenero">Gênero</label>
-                            <select class="form-control" id="selectGenero" [selectedIndex]="0">
+                            <select class="form-control" id="selectGenero" [selectedIndex]="0" [(ngModel)]="title.genero">
                                 <option disabled>Selecione</option>
-                                <option>Ação</option>
-                                <option>Aventura</option>
-                                <option>Romance</option>
-                                <option>Terror</option>
-                                <option>Suspense</option>
+                                <option value="Acao">Ação</option>
+                                <option value="Aventura">Aventura</option>
+                                <option value="Romance">Romance</option>
+                                <option value="Terror">Terror</option>
+                                <option value="Suspende">Suspense</option>
                             </select>
                         </div>
     
                         <div class="form-group col-6">
                             <label for="selectTipo">Tipo</label>
-                            <select class="form-control" id="selectTipo" [selectedIndex]="0">
+                           <!-- <select  class="form-control" id="selectTipo" [selectedIndex]="0" [(ngModel)]="title.tipo">
                                 <option disabled>Selecione</option>
-                                <option>Filme</option>
-                                <option>Série</option>
-                                <option>Desenho</option>
-                            </select>
+                                <option ngValue="Filme">Filme</option>
+                                <option ngValue="Serie">Série</option>
+                                <option ngValue="Desenho">Desenho</option>
+                            </select>-->
+                            <select type="number" [(ngModel)]="title.tipo">
+                                <option *ngFor="let tipo of tipos" [ngValue]="tipo.tipo">{{tipo.tipo}}</option>
+                              </select>
+                           
                         </div>
     
                     </div>
@@ -45,7 +49,7 @@
 
                     <div class="form-group mb-3">
                             <label for="exampleFormControlTextarea1">Sinopse</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" name="sinopse" #sinopse="ngModel" rows="3" [(ngModel)]="title.sinopse"></textarea>
                     </div>
                     
 

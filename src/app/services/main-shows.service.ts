@@ -1,66 +1,48 @@
 import { Injectable } from '@angular/core';
 import { mainShows } from '../models/main-shows';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { TestBed } from '@angular/core/testing';
+import { faLuggageCart } from '@fortawesome/free-solid-svg-icons';
 
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json'
+  })
+};
 @Injectable({
   providedIn: 'root'
 })
 export class MainShowsService {
 
-  public mainshows: Array<mainShows> = [
-    {
-      id: 0,
-      nome: 'Sherlock',
-      foto: './../../assets/img-mock/sherlock.jpg'
-    },
-    {
-      id: 1,
-      nome: 'Bridgerton',
-      foto: './../../assets/img-mock/bridgerton.jpg'
-    },
-    {
-      id: 2,
-      nome: 'My name',
-      foto: './../../assets/img-mock/myname.jpg'
-    },
-  ];
-  constructor() { }
 
-  public getAll(): Array<mainShows> {
-    return this.mainshows;
+  private url: string = environment.api+'main-show/';
+
+  constructor(private httpClient: HttpClient) { }
+
+  public getAll(): Observable<mainShows[]> {
+    return this.httpClient.get<mainShows[]>(this.url);
   }
 
-  public get(id: number): mainShows {
-    for (let obj of this.mainshows) {
-      if (id === obj.id) {
-        return obj;
-      }
-    }
-
-    return new mainShows();
+  public get(id: number): Observable<mainShows> {
+    return this.httpClient.get<mainShows>(this.url+id);
   }
 
-  public add(show: mainShows) {
-    show.id = this.mainshows.length;
-    this.mainshows.push(show);
+  public add(mainShow: mainShows) {
+    const mainShowsPost = JSON.stringify(mainShow);
+    return this.httpClient.post(this.url,mainShowsPost,httpOptions);
+
   }
 
-  public edit(show: mainShows) {
-    for(let obj of this.mainshows) {
-      if (show.id === obj.id) {
-        obj.nome = show.nome;
-        obj.foto = show.foto;
-        break;
-      }
-    }
+  public edit(title: mainShows) {
+    const mainShowsPost = JSON.stringify(title);
+    return this.httpClient.put(this.url,mainShowsPost,httpOptions);
   }
 
   public delete(id: number) {
-    let posicao = 0;
-    
-    posicao = this.mainshows.findIndex( (show) => id === show.id );
-
-    this.mainshows.splice(posicao, 1);
-
+    return this.httpClient.delete(this.url+id);
   }
-
+ 
 }
