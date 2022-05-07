@@ -31,9 +31,9 @@ export class TitlesService {
 
   }
 
-  public edit(title: Titulos) {
+  public edit(title: Titulos) : Observable<Object> {
     const titlePost = JSON.stringify(title);
-    return this.httpClient.put(this.url,titlePost,httpOptions);
+    return this.httpClient.put(this.url+title.id,titlePost,httpOptions);
   }
 
   public delete(id: number) {

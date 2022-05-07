@@ -1,0 +1,75 @@
+.add-page{
+    background-color: black;
+    height: 100vh;
+    margin:0;
+    padding: 0;
+}
+
+.titulo{
+    background-color: #950101;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 10px;
+}
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 20px;
+    top: 5%;
+}
+
+.card {
+    max-width: 70%;
+    min-width: 50%;
+    border: none;
+    border-radius: 15px;    
+    background-color: #444444;
+    color: white;
+}
+
+.card-body {
+    padding: 0;    
+}
+
+.form-body {
+    padding: 20px;
+}
+
+.button-container {
+    justify-content: space-around;
+}
+
+#btn-salvar{
+    background-color: #950101;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    width: 200px;
+}
+
+#btn-cancel {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-size: large;
+    width: 200px;
+    margin-right: 10px;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+.form-control:focus {
+    border-color: transparent;
+    border: 1px solid #950101;
+    box-shadow: none;
+}
+
+

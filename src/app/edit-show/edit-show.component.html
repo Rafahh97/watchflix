@@ -7,7 +7,7 @@
         <div class="card">
             <div class="card-body">
                 <div class="titulo">
-                    <h2>Adicionar título</h2>
+                    <h2>Editar título</h2>
                 </div> 
 
                 <form class="form-body">
@@ -38,19 +38,6 @@
                                 <option value="Serie">Série</option>
                                 <option value="Desenho">Desenho</option>
                             </select>
-                            <!-- <select type="number" [(ngModel)]="title.tipo">
-                                <option *ngFor="let tipo of tipos" [ngValue]="tipo.tipo">{{tipo.tipo}}</option>
-                              </select> -->
-                              <!-- <select class="form-control" type="number" [(ngModel)]="typeId" (ngModelChange)="onAddType()" >
-                                <option *ngFor="let tipo of tipos" [ngValue]="tipo">
-                                  <p>{{ tipo }}</p>
-                                </option>
-                              </select> -->
-                              <!-- <select [(ngModel)]="selectedOption" name="tipo">
-                                <option *ngFor="let o of options">
-                                   {{o.name}}
-                                </option>
-                             </select> -->
                         </div>
                         
                     </div>
@@ -74,13 +61,19 @@
 
                     <div class="d-flex button-container">
                         <div>
+                            <button (click)="excluir()" class="btn" id="btn-cancel" type="button">
+                                Excluir
+                            </button>
+                        </div>
+
+                        <div>
                             <button routerLink="/mainpage" class="btn" id="btn-cancel" type="button">
                                 Cancelar
                             </button>
                         </div>
 
                         <div>
-                            <button (click)="cadastrar()" class="btn" id="btn-salvar" type="button">
+                            <button (click)="editar()" class="btn" id="btn-salvar" type="button">
                                 Salvar
                             </button>
                         </div>                        
@@ -93,4 +86,3 @@
     
 </div>
 <app-footer></app-footer>
-

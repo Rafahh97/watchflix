@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddShowComponent } from './add-show/add-show.component';
+import { EditShowComponent } from './edit-show/edit-show.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { LoginComponent } from './login/login.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: 'new',
     component: AddShowComponent
+  },
+  {
+    path: 'edit/:id',
+    component: EditShowComponent
   }
 ];
 
