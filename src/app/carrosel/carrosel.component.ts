@@ -41,7 +41,7 @@ export class CarroselComponent implements OnInit {
        items: 6
      },
      1000: {
-       items: 7
+       items: 8
      }
    },
  };

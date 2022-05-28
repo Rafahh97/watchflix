@@ -14,13 +14,13 @@
         
                     <div class="mb-3">
                         <label for="titulo" class="form-label">Título</label>
-                        <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="title.title">
+                        <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="title.title" required>
                     </div>
 
                     <div class="row mb-3">
                         <div class="form-group col-6">
                             <label for="selectGenero">Gênero</label>
-                            <select class="form-control" id="selectGenero" [selectedIndex]="0" [(ngModel)]="title.genero" name="genero">
+                            <select class="form-control" id="selectGenero" [selectedIndex]="0" [(ngModel)]="title.genero" name="genero" required>
                                 <option disabled>Selecione</option>
                                 <option value="Acao">Ação</option>
                                 <option value="Aventura">Aventura</option>
@@ -32,7 +32,7 @@
     
                         <div class="form-group col-6">
                             <label for="selectTipo">Tipo</label>
-                           <select  class="form-control" id="selectTipo" [selectedIndex]="0" [(ngModel)]="title.tipo" name="tipo">
+                           <select  class="form-control" id="selectTipo" [selectedIndex]="0" [(ngModel)]="title.tipo" name="tipo" required>
                                 <option disabled>Selecione</option>
                                 <option value="Filme">Filme</option>
                                 <option value="Serie">Série</option>
@@ -45,14 +45,14 @@
 
                     <div class="form-group mb-3">
                             <label for="exampleFormControlTextarea1">Sinopse</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" name="sinopse" #sinopse="ngModel" rows="3" [(ngModel)]="title.sinopse"></textarea>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" name="sinopse" #sinopse="ngModel" rows="3" [(ngModel)]="title.sinopse" required></textarea>
                     </div>
                     
 
                     <div class="mb-3">
                         <label for="foto" class="form-label">Foto</label>
                         <input type="text" class="form-control" id="foto" 
-                        name="foto" [(ngModel)]="title.capa">
+                        name="foto" [(ngModel)]="title.capa" required>
                       </div>
 
                     <div class="text-center mb-4">

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddShowComponent } from './add-show/add-show.component';
 import { EditShowComponent } from './edit-show/edit-show.component';
+import { AuthGuardService } from './Guards/auth-guard.service';
 import { HomepageComponent } from './homepage/homepage.component';
 import { LoginComponent } from './login/login.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
@@ -28,19 +29,23 @@ const routes: Routes = [
   },
   { 
     path: 'mainpage', 
-    component: MainpageComponent 
+    component: MainpageComponent ,
+    canActivate: [AuthGuardService]
   },
   { 
     path: 'manager', 
-    component: ManageShowsComponent 
+    component: ManageShowsComponent,
+    canActivate: [AuthGuardService]
   },
   {
     path: 'new',
-    component: AddShowComponent
+    component: AddShowComponent,
+    canActivate: [AuthGuardService]
   },
   {
     path: 'edit/:id',
-    component: EditShowComponent
+    component: EditShowComponent,
+    canActivate: [AuthGuardService]
   }
 ];
 

@@ -9,35 +9,72 @@
             <div class="card mx-auto">
                 <div class="card-body">
                     <h2>Cadastro</h2>
-                    <form>
+                    <form #form="ngForm" [formGroup]="formUser" (ngSubmit)="registrar()">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nome"
-                                placeholder="Nome">
+                            <input [class.invalid]="
+                            !formUser.controls['nome'].valid 
+                            && (formUser.controls['nome'].touched || form.submitted)" type="text" class="form-control" id="nome" aria-describedby="nome"
+                                placeholder="Nome" name="nome"  formControlName="nome">
+                        </div>
+                        <div class="alert alert-danger mt-1" role="alert"
+                        *ngIf="    !formUser.controls['nome'].valid &&
+                        (form.submitted || formUser.get('nome')?.touched)">
+                        Informe um nome com pelo menos 5 e no máximo 150 caracteres!
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="sobrenome"
-                                placeholder="Sobrenome">
+                            <input [class.invalid]="
+                            !formUser.controls['sobrenome'].valid 
+                            && (formUser.controls['sobrenome'].touched || form.submitted)" type="text" class="form-control" id="Sobrenome" aria-describedby="sobrenome"
+                                placeholder="Sobrenome" name="sobrenome"  formControlName="sobrenome">
                         </div>
+
+                        <div class="alert alert-danger mt-1" role="alert"
+                        *ngIf="    !formUser.controls['sobrenome'].valid &&
+                        (form.submitted || formUser.get('sobrenome')?.touched)">
+                        Informe um sobrenome com pelo menos 5 e no máximo 150 caracteres!
+                        </div>
+
                         <div class="form-group">
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="dataNascimento"
-                                placeholder="Data de nascimento">
+                            <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="dataNascimento"
+                                placeholder="Data de nascimento" name="dataNascimento"  formControlName="dataNascimento">
                         </div>
+
                         <div class="form-group">
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="E-mail"
-                                placeholder="E-mail">
+                            <input [class.invalid]="
+                            !formUser.controls['email'].valid 
+                            && (formUser.controls['email'].touched || form.submitted)" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="E-mail"
+                                placeholder="E-mail" name="email"  formControlName="email">
                         </div>
+                        <div class="alert alert-danger mt-1" role="alert"
+                        *ngIf="    !formUser.controls['email'].valid &&
+                        (form.submitted || formUser.get('email')?.touched)">
+                        Informe um email valido!
+                        </div>
+
                         <div class="form-group">
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="Confirmar e-mail" placeholder="Confirmar e-mail">
+                            <input [class.invalid]="
+                            !formUser.controls['senha'].valid 
+                            && (formUser.controls['senha'].touched || form.submitted)" type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha" name="senha"  formControlName="senha">
                         </div>
+                        <div class="alert alert-danger mt-1" role="alert"
+                        *ngIf="    !formUser.controls['senha'].valid &&
+                        (form.submitted || formUser.get('senha')?.touched)">
+                        Informe um senha valido!
+                        </div>
+
                         <div class="form-group">
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+                            <input [class.invalid]="
+                            !formUser.controls['senhaCheck'].valid 
+                            && (formUser.controls['senhaCheck'].touched || form.submitted)" type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Confirmar senha" name="senhaCheck"  formControlName="senhaCheck">
                         </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" id="exampleInputPassword1"
-                                placeholder="Confirmar senha">
+                        <div class="alert alert-danger mt-1" role="alert"
+                        *ngIf="    !formUser.controls['senhaCheck'].valid &&
+                        (form.submitted || formUser.get('senhaCheck')?.touched)">
+                        Informe um senha valido!
                         </div>
-                        <a routerLink="/login"><button type="submit" class="btn btn-primary signup-button">Finalizar cadastro</button></a>
+
+                        <button type="submit" class="btn btn-primary signup-button">Finalizar cadastro</button>
                         
                         <hr style="height:2px;border-width:0;color:gray;background-color:gray">
 
