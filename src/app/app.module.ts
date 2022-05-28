@@ -15,7 +15,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ManageShowsComponent } from './manage-shows/manage-shows.component';
 import { AddShowComponent } from './add-show/add-show.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditShowComponent } from './edit-show/edit-show.component';
 
 @NgModule({
@@ -39,7 +39,8 @@ import { EditShowComponent } from './edit-show/edit-show.component';
     FontAwesomeModule,
     BrowserAnimationsModule,
     CarouselModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

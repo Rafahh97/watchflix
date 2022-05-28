@@ -239,12 +239,12 @@
     },
     {
       "id": 30,
-      "title": "Heartstopper",
-      "capa": "https://pbs.twimg.com/media/FOTHcqCXIAA-cHh.jpg",
+      "title": "After",
+      "capa": "https://livrariascuritiba.vteximg.com.br/arquivos/ids/1945294/lv466509_1.jpg?v=637375138007300000",
       "alt": "",
       "genero": "Romance",
-      "tipo": "",
-      "sinopse": "Teste"
+      "tipo": "Filme",
+      "sinopse": "Filme de romance"
     },
     {
       "id": 31,
@@ -271,6 +271,17 @@
       "id": 2,
       "nome": "My name",
       "foto": "./../../assets/img-mock/myname.jpg"
+    }
+  ],
+  "user": [
+    {
+      "nome": "kkkkkkkkkkkk",
+      "sobrenome": "kkkkkkkkkkkkkk",
+      "dataNascimento": "2022-04-26",
+      "email": "kkkkkkkkkk@gmail.com",
+      "senha": "12345678",
+      "senhaCheck": "12345678",
+      "id": 3
     }
   ]
 }

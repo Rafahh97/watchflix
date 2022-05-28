@@ -71,6 +71,9 @@ input{
     width: 100%;
     margin-bottom: 10px;
 }
+.invalid {
+    border: 2px solid #d4eb05;
+}
 
 .facebook-button:hover{
     box-shadow: 0 0 0 0.2rem #4267B2;

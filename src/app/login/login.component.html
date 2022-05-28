@@ -7,15 +7,18 @@
                     <form>
                         <div class="form-group">
                             <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="E-mail" placeholder="E-mail">
+                                aria-describedby="E-mail" placeholder="E-mail" name="email" [(ngModel)]="user.email">
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha" name="senha"  [(ngModel)]="user.senha">
                         </div>
                         <div>
                             <p class="forgot">Esqueceu sua senha?</p>
                         </div>
-                        <a routerLink="/mainpage"><button type="submit" class="btn btn-primary login-button">Entrar</button></a>
+                            <button type="submit" class="btn btn-primary login-button" (click)="realizarLogin()">
+                              Entrar
+                           </button>
+      
 
                         <hr style="height:2px;border-width:0;color:gray;background-color:gray">
 
@@ -26,7 +29,9 @@
                             <button type="button" class="btn btn-primary google-button"> Entrar com o Google</button>
                         </div>
                         <div>
-                            <p class="not-register">Ainda não possui uma conta? <a routerLink="/signup" class="go-signup">CADASTRE-SE</a></p>
+                            <p class="not-register">
+                                Ainda não possui uma conta?
+                                 <a [routerLink]="['/signup']" class="go-signup">CADASTRE-SE</a></p>
                         </div>
                     </form>
                 </div>
